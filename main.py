@@ -11,7 +11,9 @@ def print_hi(name):
 
 import time
 from selenium import webdriver
-from selenium.webdriver.common.by import By ##https://habr.com/ru/articles/250975/
+from selenium.webdriver.common.by import By
+
+
 
 
 link = "https://www.youtube.com/" #обьявили переменную и в нее поместили нашу ссылку
@@ -26,9 +28,13 @@ try:
     button_2 = browser.find_element(By.CSS_SELECTOR, value= '#content > a')
     button_2.click() #клик
 finally:
-    # задержка 30 секунд
+    # задержка 13 секунд
     time.sleep(30)
-    browser.quit()
+
+
+
+
+
 
 
 
