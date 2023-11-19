@@ -15,9 +15,9 @@ from selenium.webdriver.common.by import By
 
 
 
-
+#
 link = "https://www.youtube.com/" #обьявили переменную и в нее поместили нашу ссылку
-
+#
 try:
     browser = webdriver.Chrome()
     browser.get(link) # сделали запрос по нашей ссылке
@@ -27,16 +27,15 @@ try:
     input_1.submit() #что типо энтэра
     button_2 = browser.find_element(By.CSS_SELECTOR, value= '#content > a')
     button_2.click() #клик
+    time.sleep(20)
+    browser.refresh()  # обновить страницу
+    time.sleep(2)
+    browser.get_screenshot_as_file('3.png')
+    browser.save_screenshot('333.png')
 finally:
     # задержка 13 секунд
-    time.sleep(30)
-
-
-
-
-
-
-
+    time.sleep(10)
+    browser.quit()
 
 
 
