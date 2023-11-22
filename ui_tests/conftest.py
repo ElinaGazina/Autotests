@@ -42,4 +42,4 @@ def browser_function(mode_browser):
 
 @pytest.fixture(scope='function')
 def youtube_page():
-    return YoutubePage
+    return YoutubePage()
